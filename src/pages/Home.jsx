@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <section className="flex flex-col items-center justify-center h-screen">
+            <section className="flex flex-col items-center justify-center pt-28 md:pt-28 lg:pt-28">
                 <img src={libapp} alt="" className="w-[100%] bg-fixed" />
                 <h1 className="text-6xl text-center font-bold">WELCOME TO BOOKS HAVEN</h1>
 
