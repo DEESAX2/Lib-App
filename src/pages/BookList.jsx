@@ -17,8 +17,16 @@ export default function BookList() {
         <BookCard image={idiotbrain} />
         <BookCard image={influencebias} />
         <BookCard image={standout} />
+        <BookCard image={standout} />
+        <BookCard image={standout} />
+        <BookCard image={standout} />
+        <BookCard image={standout} />
+        <BookCard image={standout} />
         <BookCard image={arguing} />
         <BookCard image={artoflogic} />
+        <BookCard image={artoflogic} />
+        <BookCard image={artoflogic} />
+        <BookCard image={influencebias} />
         <BookCard image={influencebias} />
       </div>
     </section>
