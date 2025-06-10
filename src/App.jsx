@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import AddBook from "./pages/AddBook"
+import EditBook from "./pages/EditBook";
 import BookList from "./pages/BookList";
 import CreateAccount from "./pages/CreateAccount";
 import Home from "./pages/Home";
@@ -9,7 +10,8 @@ import NotFound from "./pages/NotFound";
 
 const libAppRouter = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/addbook", element: <AddBook /> },
+  { path: "/add-book", element: <AddBook /> },
+  { path: "/edit-book", element: <EditBook /> },
   { path: "/booklist", element: <BookList /> },
   { path: "/create-account", element: <CreateAccount /> },
   { path: "/login", element: <Login /> },
