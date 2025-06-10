@@ -1,32 +1,42 @@
-import React from "react";
 import logo from "../assets/images/logo.jpg";
+import { Link } from "react-router";
 
-
-function Navbar(){
-    return (
-
-<nav className="bg-[#E7E7E7] text-shadow-black">
-    <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-
+function Navbar() {
+  return (
+    <nav className="bg-[#E7E7E7] text-shadow-black fixed top-0 left-0 right-0 shadow-md">
+      <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         {/* ----LOGO---- */}
-        <a href="#" className="flex items-center space-x-2">
-        <img src ={logo} alt="Library Logo" className="h-10 w-15 rounded-full" /></a>
-
-
-
+        <Link to="#" className="flex items-center space-x-2">
+          <img
+            src={logo}
+            alt="Library Logo"
+            className="h-15 w-35 rounded-full"
+          />
+        </Link>
 
         {/* ----NAVIGATION LINKS---- */}
-        {/* <a href="/" className="text-2xl font-bold text-gray-800">Library App</a> */}
-        <ul className="flex space-x-4">
-            <li><a href="/" className="text-gray-600 hover:text-gray-800 transition">Home</a></li>
-            <li><a href="/add-book" className="text-gray-600 hover:text-gray-800 transition">Add Book</a></li>
-            <li><a href="/booklist" className="text-gray-600 hover:text-gray-800 transition">Book List</a></li>
-            <li><a href="/create-account" className="text-gray-600 hover:text-gray-800 transition" >Create Account</a></li>
-            <li><a href="/login" className="text-gray-600 hover:text-gray-800 transition">Login</a></li>
+        <ul className="flex space-x-6">
+          <li>
+            <Link to="/"className="text-gray-600 hover:text-gray-900 bold transition ">Home</Link>
+          </li>
+          <li>
+            <Link to="/add-book"className="text-gray-600 hover:text-gray-800 transition">AddBook</Link>
+          </li>
+          <li>
+            <Link to="/booklist"className="text-gray-600 hover:text-gray-800 transition">BookList</Link>
+          </li>
+          <li>
+            <Link to="/edit-book"className="text-gray-600 hover:text-gray-800 transition">EditBook</Link>
+          </li>
+          <li>
+            <Link to="/view-book"className="text-gray-600 hover:text-gray-800 transition">ViewBook</Link>
+          </li>
+          <li>
+            <Link to="/contact"className="text-gray-600 hover:text-gray-800 transition">Contact</Link>
+          </li>
         </ul>
-    </div>
-    
-</nav>
-    );
+      </div>
+    </nav>
+  );
 }
 export default Navbar;
