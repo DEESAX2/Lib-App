@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ViewBook from "./pages/ViewBook";
 import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const libAppRouter = createBrowserRouter([
   { path: "/", element: <Home /> },
