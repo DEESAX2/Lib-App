@@ -6,18 +6,19 @@ import intelligence from "../assets/images/intelligence.jpg";
 import standout from "../assets/images/standout.jpg";
 import solveit from "../assets/images/solveit.jpg";
 import theidiotbrain from "../assets/images/theidiotbrain.jpg";
+import artoflogic from "../assets/images/artoflogic.jpg";
 import { Link } from "react-router";
 
 
 export default function Home() {
     return (
         <>
-            <Navbar />
+            <Navbar className ="" />
             <section className="flex flex-col items-center justify-center pt-28 md:pt-28 lg:pt-28">
                 <img src={libapp} alt="" className="w-[100%] bg-fixed" />
-                <h1 className="text-6xl text-center font-bold">WELCOME TO BOOKS HAVEN</h1>
+                <h1 className="text-6xl text-center font-bold gap-4">WELCOME TO BOOKS HAVEN</h1>
 
-                <div className="flex flex-col items-center justify-center mt-4">
+                <div className="flex flex-col items-center justify-center mt-4 gap-6">
                     <button>Who is reading</button>
                     <select name="persona" id="persona">
                         <option selected disabled>Select</option>
@@ -43,9 +44,11 @@ export default function Home() {
                         { slug: "how-to-stand-out", title: "How to Stand Out", author: "Dr.Rob Yeun", cover: standout },
                         { slug: "how-to-solve-it", title: "How to Solve it", author: "George Polya", cover: solveit },
                         { slug: "the-idiot-brain", title: "The Idiot Brain", author: "Dean Burnett", cover: theidiotbrain },
+                         { slug: "the-art-of-logic", title: "The Art Of Logic", author: "Dean Burnett", cover: artoflogic },
+                        
                     ].map((book, idx) => (
                         <Link
-                            to={`/viewbook/${book.slug}`}
+                            to={`/view-book/${book.slug}`}
                             key={idx}
                             className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition"
                         >

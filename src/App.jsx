@@ -17,7 +17,7 @@ const libAppRouter = createBrowserRouter([
   { path: "/booklist", element: <BookList /> },
   { path: "/create-account", element: <CreateAccount /> },
   { path: "/login", element: <Login /> },
-  { path: "/view-book", element: <ViewBook /> }, 
+  { path: "/view-book/:slug", element: <ViewBook /> }, 
   { path: "*", element: <NotFound /> },
 ]);
 
