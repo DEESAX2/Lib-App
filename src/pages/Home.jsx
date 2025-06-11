@@ -13,25 +13,13 @@ import { Link } from "react-router";
 export default function Home() {
     return (
         <>
-            <Navbar className ="" />
+            <Navbar className ="p-2" />
             <section className="flex flex-col items-center justify-center pt-28 md:pt-28 lg:pt-28">
                 <img src={libapp} alt="" className="w-[100%] bg-fixed" />
                 <h1 className="text-6xl text-center font-bold gap-4">WELCOME TO BOOKS HAVEN</h1>
 
-                <div className="flex flex-col items-center justify-center mt-4 gap-6">
-                    <button>Who is reading</button>
-                    <select name="persona" id="persona">
-                        <option selected disabled>Select</option>
-                        <option value="kids">Kids</option>
-                        <option value="teens">Teens</option>
-                        <option value="adults">Adults</option>
-                    </select>
-                    <div className="flex flex-row p-6 justify-around space-x-4">
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-xl">KIDS</button>
-                        <button className="bg-red-800 text-white px-4 py-2 rounded-xl">TEENS</button>
-                        <button className="bg-pink-500 text-white px-4 py-2 rounded-xl">ADULTS</button>
-                    </div>
-                </div>
+                <img src="{}" alt="" />
+
             </section>
 
             <section>
