@@ -21,20 +21,18 @@ function Footer() {
           <p>B.J Da Rocha loop,20.</p>
           <p>Accra, Ghana</p>
           <p className="mb-3">+233 545 725 331</p>
-          <p className="mb-2">Connect with us!</p>
+          <p className="mb-2 font-bold text-xl">Connect with us!</p>
           <div className="flex justify-center sm:justify-start space-x-3">
-            <a href="#"className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-500 transition-colors duration-300"aria-label="Facebook"
-            ><FaFacebookF className="w-6 h-6 text-[#1877F3]" /></a>
-            <a href="#"className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-500 transition-colors duration-300"
-              aria-label="Twitter">{" "}<FaTwitter className="w-6 h-6 text-[#fff]" /></a>
-            <a href="#" className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-500 transition-colors duration-300"
-              aria-label="LinkedIn"><FaLinkedinIn className="w-6 h-6 text-[#0077B5]" />{" "}</a>
-            <a href="#" className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-500 transition-colors duration-300" aria-label="Instagram">
-              <FaInstagram className="w-6 h-6 text-[#E4405F]" />
+            <a href="#"className="w-6 h-6 flex items-center justify-center rounded-full bg-[#1877F3] transition-colors duration-300"aria-label="Facebook"
+            ><FaFacebookF className="w-6 h-6 text-[#1877F3]transform transition-transform duration-300 hover:scale-135" /></a>
+            <a href="#"className="w-6 h-6 flex items-center justify-center rounded-full bg-[#1DA1F2] transition-colors duration-300"
+              aria-label="Twitter"><FaTwitter className="w-6 h-6 text-[#fff]transform transition-transform duration-300 hover:scale-135" /></a>
+            <a href="#" className="w-6 h-6 flex items-center justify-center rounded-full bg-[#1DA1F2] transition-colors duration-300"
+              aria-label="LinkedIn"><FaLinkedinIn className="w-6 h-6 text-[#0077B5]transform transition-transform duration-300 hover:scale-135" />{" "}</a>
+            <a href="#" className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FE343B] transition-colors duration-300" aria-label="Instagram">
+              <FaInstagram className="w-6 h-6 text-[#E4405F]transform transition-transform duration-300 hover:scale-135" />
             </a>
-              <a href="https://wa.me/233545725331" target="_blank" rel="noopener noreferrer"
-    className="w-6 h-6 flex items-center justify-center rounded-full bg-green-600 hover:bg-green-700 transition-colors duration-300"aria-label="WhatsApp"><FaWhatsapp className="w-46 h-6 text-white" />
-  </a>
+              <a href="https://wa.me/233545725331" target="_blank" rel="noopener noreferrer"className="w-6 h-6 flex items-center justify-center rounded-full bg-green-600 hover:bg-green-700 transition-colors duration-300"aria-label="WhatsApp"><FaWhatsapp className="w-46 h-6 text-white transform transition-transform duration-300 hover:scale-135"/></a>
           </div>
         </div>
       </div>
