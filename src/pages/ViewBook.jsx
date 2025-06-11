@@ -1,8 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import openbook from "../assets/images/openbook.png";
 import artoflogic from "../assets/images/artoflogic.jpg";
-import arguing from "../assets/images/arguing.jpg";
+
 
 
 export default function ViewBook() {
@@ -16,7 +15,7 @@ export default function ViewBook() {
                 <div className="grid grid-cols-3 m-20">
 
                     <div><img src={artoflogic} alt="artoflogic" className="w-60 flex flex-col justify-center" />
-                        </div>
+                    </div>
 
                     <div>
                         <h1 className="text-2xl font-semibold">The Art Of Logic</h1>
@@ -26,8 +25,8 @@ export default function ViewBook() {
                     </div>
 
                     <div>
-                    <button className="bg-amber-300 p-5 cursor-pointer">Edit</button>
-                    <button className="bg-red-500 p-5 cursor-pointer">Delete</button>
+                        <button className="bg-amber-300 p-5 cursor-pointer">Edit</button>
+                        <button className="bg-red-500 p-5 cursor-pointer">Delete</button>
                     </div>
 
                 </div>
