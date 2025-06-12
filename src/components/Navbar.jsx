@@ -23,8 +23,7 @@ function Navbar() {
             href="https://houstonlibrary.org/get-help"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center hover:underline text-xl bold font-light focus:outline-none"
-          >
+            className="flex items-center hover:underline text-xl bold font-light focus:outline-none" >
             <FaQuestionCircle className="mr-1 text-[#B32317] text-xl" />
             {t("getHelp")}
           </a>
