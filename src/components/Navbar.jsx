@@ -121,22 +121,6 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link
-              to="/edit-book"
-              className="text-black-600 font-bold hover:text-[#B32317] transition"
-            >
-              {t("editBook")}
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/view-book/:slug"
-              className="text-black-600 font-bold hover:text-[#B32317] transition"
-            >
-              {t("viewBook")}
-            </Link>
-          </li>
-          <li>
             <a
               href="#footer"
               className="text-black-600 font-bold hover:text-[#B32317] transition"
