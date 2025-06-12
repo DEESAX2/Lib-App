@@ -10,16 +10,18 @@ import artoflogic from "../assets/images/artoflogic.jpg";
 import { Link } from "react-router";
 import anotherhero from "../assets/images/anotherhero.jpg";
 import { Search } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 
 export default function Home() {
+    const { t } = useTranslation();
     return (
         <>
             <Navbar />
             <section className="hero-image bg-[url(./assets/images/anotherhero.jpg)] h-[596px] bg-cover w-[100%] md:[100%] mx-auto relative  mt-39 md:mt-39"> 
-                <h1 className=" text-3xl text-black text-center font-bold ">WELCOME TO BOOKS HAVEN</h1>
+                <h1 className=" text-3xl text-black text-center font-bold ">{t("welcomeMessage")}</h1>
               <div className=" flex justify-center mt-50  md:mt-50 ">
-              <input type="search" name="book" id="book" placeholder="Search book" className=" bg-white border-beige p-2  px-6 rounded-md" />
+              <input type="search" name="book" id="book" placeholder="Search book" className=" bg-beige p-2 rounded-md" />
                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"><Search  className="" /></a>
                </div>
         

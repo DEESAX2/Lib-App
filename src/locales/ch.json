@@ -28,5 +28,7 @@
   "allRightsReserved": "版权所有。",
   "accessibility": "无障碍",
   "privacyAndSecurity": "隐私与安全",
-  "libraryPolicies": "图书馆政策"
+  "libraryPolicies": "图书馆政策",
+  "welcomeMessage": "欢迎来到 Books Haven 图书馆！",
+  "searchBook": "搜索书籍"
 }
