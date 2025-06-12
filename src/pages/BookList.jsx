@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import arguing from "../assets/images/arguing.jpg"
-import artoflogic from "../assets/images/artoflogic.jpg"
-import idiotbrain from "../assets/images/idiotbrain.jpg";
-import influencebias from "../assets/images/influencebias.jpg";
-import standout from "../assets/images/standout.jpg";
 import BookCard from "../components/book-card";
 import { apiClient } from "../api/client";
 
 export default function BookList() {
 
+  // useState is a hook that gives a component memory
   const [books, setBooks] = useState([]);
 
   const getBooks = () => {

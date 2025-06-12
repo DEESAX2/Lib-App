@@ -56,7 +56,7 @@ function Navbar() {
           </li>
           <li><Link to="/edit-book"className="text-black-600 font-bold hover:text-[#B32317] transition"> EditBook </Link>
           </li>
-          <li><Link to="/view-book/:slug"className="text-black-600 font-bold hover:text-[#B32317] transition"> ViewBook</Link>
+          <li><Link to="/view-book"className="text-black-600 font-bold hover:text-[#B32317] transition"> ViewBook</Link>
           </li>
           <li><a href="#footer" className="text-black-600 font-bold hover:text-[#B32317] transition">Contact </a>
           </li>
