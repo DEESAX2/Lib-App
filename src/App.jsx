@@ -9,6 +9,7 @@ import ViewBook from "./pages/ViewBook";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./i18n";
 
 const libAppRouter = createBrowserRouter([
   { path: "/", element: <Home /> },

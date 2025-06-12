@@ -1,7 +1,7 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Star } from "lucide-react"; // Assuming you have lucide-react installed for icons
+import React from "react";
+import { Star } from "lucide-react"; //Assuming you have lucide installed for icons
 
 
 
@@ -11,7 +11,7 @@ export default function EditBook() {
             <Navbar />
             <section className="flex flex-col items-center bg-amber-300  justify-center pt-40 md:pt-40 lg:pt-40">
                 <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
-                    <h2 className="text-3xl font-bold mb-6 text-center">Edit Book Details</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-center">📔Edit Book Details</h2>
                     <form className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Title</label>
@@ -34,44 +34,14 @@ export default function EditBook() {
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">ISBN</label>
-                            <input
-                                type="text"
-                                name="isbn"
-                                className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                placeholder="e.g. 978-3-16-148410-0"
-                            />
-                        </div>
-                        <div>
                             <label className="block text-sm font-medium text-gray-700">Genre</label>
-                            <select
+                            <input
                                 name="genre"
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 defaultValue=""
+                                placeholder="eg.Fiction"
                                 required
-                            >
-                                <option value="">Select genre</option>
-                                <option value="Fiction">Fiction</option>
-                                <option value="Non-Fiction">Non-Fiction</option>
-                                <option value="Science">Science</option>
-                                <option value="Biography">Biography</option>
-                                <option value="Fantasy">Fantasy</option>
-                                <option value="History">History</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Category</label>
-                            <select
-                                name="category"
-                                className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                defaultValue=""
-                                required
-                            >
-                                <option value="">Select category</option>
-                                <option value="Children">Children</option>
-                                <option value="Teens">Teens</option>
-                                <option value="Adults">Adults</option>
-                            </select>
+                            />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Published Date</label>
@@ -82,7 +52,7 @@ export default function EditBook() {
                                 defaultValue="2022-08-15"
                             />
                         </div>
-                        <div>
+                        {/* <div>
                             <label className="block text-sm font-medium text-gray-700">Description</label>
                             <textarea
                                 name="description"
@@ -90,7 +60,7 @@ export default function EditBook() {
                                 rows="4"
                                 defaultValue="Existing description..."
                             ></textarea>
-                        </div>
+                        </div> */}
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Rating</label>
                             <div className="flex items-center space-x-1">

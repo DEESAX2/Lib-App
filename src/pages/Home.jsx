@@ -8,16 +8,21 @@ import solveit from "../assets/images/solveit.jpg";
 import theidiotbrain from "../assets/images/theidiotbrain.jpg";
 import artoflogic from "../assets/images/artoflogic.jpg";
 import { Link } from "react-router";
-import Picture2 from "../assets/images/Picture2.jpg";
+import anotherhero from "../assets/images/anotherhero.jpg";
+import { Search } from "lucide-react";
 
 
 export default function Home() {
     return (
         <>
-            <Navbar className ="p-2" />
-            <section class="hero-image" className="flex flex-col items-center justify-center "> 
-                <img src={Picture2} alt="library" className="w-[100%] gap-4 bg-fixed mt-39 md:mt-39" />
-                <h1 className="text-4xl text-center font-bold p-20">WELCOME TO BOOKS HAVEN</h1>
+            <Navbar />
+            <section className="hero-image bg-[url(./assets/images/anotherhero.jpg)] h-[596px] bg-cover w-[100%] md:[100%] mx-auto relative  mt-39 md:mt-39"> 
+                <h1 className=" text-3xl text-black text-center font-bold ">WELCOME TO BOOKS HAVEN</h1>
+              <div className=" flex justify-center mt-50  md:mt-50 ">
+              <input type="search" name="book" id="book" placeholder="Search book" className=" bg-beige p-2 rounded-md" />
+               <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"><Search  className="" /></a>
+               </div>
+        
 
 
             </section>
