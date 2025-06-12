@@ -59,9 +59,9 @@ function Footer() {
         <div>
           <h4 className="text-lg font-bold mb-2">{t("openingHours")}</h4>
           <ul className="text-sm mb-4">
-            <li>{t("monFri")}: 8:00am - 6:00pm</li>
-            <li>{t("sat")}: 9:00am - 4:00pm</li>
-            <li>{t("sun")}: {t("Closed")}</li>
+            <li>{t("monFri")}</li>
+            <li>{t("sat")}</li>
+            <li>{t("sun")}</li>
           </ul>
           <h4 className="text-lg font-bold mb-2">{t("newsletter")}</h4>
           <form className="flex">

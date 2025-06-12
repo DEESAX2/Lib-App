@@ -28,5 +28,7 @@
   "allRightsReserved": "All rights reserved.",
   "accessibility": "Accessibility",
   "privacyAndSecurity": "Privacy & Security",
-  "libraryPolicies": "Library Policies"
+  "libraryPolicies": "Library Policies",
+  "welcomeMessage": "Welcome to Books Haven Library!",
+  "searchBook": "Search for a book"
 }
