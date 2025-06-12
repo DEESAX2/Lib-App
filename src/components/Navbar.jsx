@@ -71,7 +71,6 @@ function Navbar() {
                 >
                   German
                 </li>
-                {/* Add more languages here */}
                 <li
                   className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
                   onClick={() => changeLanguage("pt")}
@@ -119,8 +118,6 @@ function Navbar() {
             >
               {t("bookList")}
             </Link>
-          </li>
-          <li><Link to="/view-book"className="text-black-600 font-bold hover:text-[#B32317] transition"> ViewBook</Link>
           </li>
           <li><a href="#footer" className="text-black-600 font-bold hover:text-[#B32317] transition">Contact </a>
           </li>
