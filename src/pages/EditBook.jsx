@@ -1,25 +1,67 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import React from "react";
-import { Star } from "lucide-react"; //Assuming you have lucide installed for icons
+import { useSearchParams } from "react-router";
+import { useEffect, useState } from "react";
+import { apiClient } from "../api/client";
+import { Star } from "lucide-react";
+
 
 
 
 export default function EditBook() {
+    const [searchParams] = useSearchParams();
+    const id = searchParams.get('id');
+
+
+    const [book, setBook] = useState({});
+
+    const getBook = () => {
+        apiClient.get(`/book/${id}`)
+            .then((response) => {
+                console.log(response.data);
+                setBook(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
+    useEffect(getBook, []);
+
+    const patchBook = (event) => {
+        event.preventDefault();
+
+        //Collect from input
+        const data = new FormData(event.target);
+
+        //Post data to api
+        apiClient.patch(`/book/${id}`, data, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
+
     return (
         <>
             <Navbar />
             <section className="flex flex-col items-center bg-amber-300  justify-center pt-40 md:pt-40 lg:pt-40">
                 <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
                     <h2 className="text-3xl font-bold mb-6 text-center">📔Edit Book Details</h2>
-                    <form className="space-y-4">
+                    <form onSubmit={patchBook} className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Title</label>
                             <input
                                 type="text"
                                 name="title"
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                defaultValue="Existing Title"
+                                defaultValue={book.title}
                                 required
                             />
                         </div>
@@ -29,7 +71,7 @@ export default function EditBook() {
                                 type="text"
                                 name="author"
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                defaultValue="Author Name"
+                                defaultValue={book.author}
                                 required
                             />
                         </div>
@@ -38,7 +80,7 @@ export default function EditBook() {
                             <input
                                 name="genre"
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                defaultValue=""
+                                defaultValue={book.genre}
                                 placeholder="eg.Fiction"
                                 required
                             />
@@ -52,13 +94,22 @@ export default function EditBook() {
                                 defaultValue="2022-08-15"
                             />
                         </div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Cover Image URL</label>
+                            <input
+                                type="text"
+                                name="imageUrl"
+                                className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                defaultValue={book.imageUrl}
+                            />
+                        </div>
                         {/* <div>
                             <label className="block text-sm font-medium text-gray-700">Description</label>
                             <textarea
                                 name="description"
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 rows="4"
-                                defaultValue="Existing description..."
+                                defaultValue={book.description}
                             ></textarea>
                         </div> */}
                         <div>

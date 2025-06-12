@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { apiClient } from "../api/client";
 
+
 export default function AddBook() {
   const postBook = (event) => {
     event.preventDefault();
