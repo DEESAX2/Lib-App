@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import logo from "../assets/images/logo.jpg";
 import { Link } from "react-router";
-import { FaQuestionCircle, FaGlobe } from "react-icons/fa";
+import { FaQuestionCircle, FaGlobe,  } from "react-icons/fa";
 import { useState } from "react";
 
 function Navbar() {
