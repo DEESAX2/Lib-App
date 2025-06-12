@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer";
-import libapp from "../assets/images/libapp.jpeg";
+import newhero from "../assets/images/newhero.jpeg";
 import influencebias from "../assets/images/influencebias.jpg";
 import intelligence from "../assets/images/intelligence.jpg";
 import standout from "../assets/images/standout.jpg";
@@ -8,17 +8,17 @@ import solveit from "../assets/images/solveit.jpg";
 import theidiotbrain from "../assets/images/theidiotbrain.jpg";
 import artoflogic from "../assets/images/artoflogic.jpg";
 import { Link } from "react-router";
+import Picture2 from "../assets/images/Picture2.jpg";
 
 
 export default function Home() {
     return (
         <>
             <Navbar className ="p-2" />
-            <section className="flex flex-col items-center justify-center pt-28 md:pt-28 lg:pt-28">
-                <img src={libapp} alt="" className="w-[100%] bg-fixed" />
-                <h1 className="text-6xl text-center font-bold gap-4">WELCOME TO BOOKS HAVEN</h1>
+            <section class="hero-image" className="flex flex-col items-center justify-center "> 
+                <img src={Picture2} alt="library" className="w-[100%] gap-4 bg-fixed mt-39 md:mt-39" />
+                <h1 className="text-4xl text-center font-bold p-20">WELCOME TO BOOKS HAVEN</h1>
 
-                <img src="{}" alt="" />
 
             </section>
 
@@ -46,6 +46,10 @@ export default function Home() {
                         </Link>
                     ))}
                 </div>
+            </section>
+
+            <section>
+                 <img src={newhero} alt="" className="w-screen gap-20   mt-39 md:mt-39" />
             </section>
 
             <Footer />
