@@ -11,7 +11,7 @@ export default function EditBook() {
             <Navbar />
             <section className="flex flex-col items-center bg-amber-300  justify-center pt-40 md:pt-40 lg:pt-40">
                 <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
-                    <h2 className="text-3xl font-bold mb-6 text-center">Edit Book Details</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-center">📔Edit Book Details</h2>
                     <form className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Title</label>

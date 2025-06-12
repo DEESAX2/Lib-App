@@ -2,23 +2,19 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { apiClient } from "../api/client";
 
-
-
-
 export default function AddBook() {
-  const postbook = (event) => {
+  const postBook = (event) => {
     event.preventDefault();
 
     //Collect from input
     const data = new FormData(event.target);
 
     //Post data to api
-    apiClient
-      .post("/api/v1/books", data, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+    apiClient.post("/book", data, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((response) => {
         console.log(response);
       })
@@ -34,7 +30,7 @@ export default function AddBook() {
         <div className="min-h-screen bg-opacity-80 flex items-center justify-center px-4">
           <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
             <h1 className="text-3xl font-bold mb-6 text-center">📚Add New Book</h1>
-            <form onSubmit={postbook} className="space-y-4">
+            <form onSubmit={postBook} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700">Title</label>
                 <input
@@ -68,15 +64,15 @@ export default function AddBook() {
                 <label className="block text-sm font-medium text-gray-700">Published Date</label>
                 <input
                   type="date"
-                  name="published"
+                  name="date"
                   className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">Cover Image URL</label>
                 <input
-                  type="imageUrl"
-                  name="cover"
+                  type="text"
+                  name="imageUrl"
                   className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
