@@ -29,13 +29,13 @@ function Footer() {
             <a href="https://twitter.com/GITOATOP" className="w-8 h-8 flex items-center justify-center rounded-full bg-[#1DA1F2] transition-transform duration-300" aria-label="Twitter">
               <FaTwitter className="w-5 h-5 text-white transform transition-transform duration-300 hover:scale-120" />
             </a>
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-[#0077B5] transition-transform duration-300" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/sandra-allotey-1266942a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="w-8 h-8 flex items-center justify-center rounded-full bg-[#0077B5] transition-transform duration-300" aria-label="LinkedIn">
               <FaLinkedinIn className="w-5 h-5 text-white transform transition-transform duration-300 hover:scale-125" />
             </a>
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-[#E4405F] transition-transform duration-300" aria-label="Instagram">
+            <a href="https://www.instagram.com/like_earl?igsh=bGFxMWhmYm02Z2wx&utm_source=qr" className="w-8 h-8 flex items-center justify-center rounded-full bg-[#E4405F] transition-transform duration-300" aria-label="Instagram">
               <FaInstagram className="w-5 h-5 text-white transform transition-transform duration-300 hover:scale-125" />
             </a>
-            <a href="https://wa.me/233545725331" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/233548311401" target="_blank" rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center rounded-full bg-[#25D366] transition-transform duration-300" aria-label="WhatsApp">
               <FaWhatsapp className="w-5 h-5 text-white transform transition-transform duration-300 hover:scale-125" />
             </a>
