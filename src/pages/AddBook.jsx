@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { apiClient } from "../api/client";
-
+import { useTranslation } from "react-i18next";
 
 export default function AddBook() {
   const postBook = (event) => {

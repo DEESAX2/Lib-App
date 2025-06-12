@@ -4,11 +4,13 @@ import { useSearchParams } from "react-router";
 import { useEffect, useState } from "react";
 import { apiClient } from "../api/client";
 import { Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 
 
 
 export default function EditBook() {
+    const {t} =useTranslation ();
     const [searchParams] = useSearchParams();
     const id = searchParams.get('id');
 
@@ -53,10 +55,10 @@ export default function EditBook() {
             <Navbar />
             <section className="flex flex-col items-center bg-amber-300  justify-center pt-40 md:pt-40 lg:pt-40">
                 <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
-                    <h2 className="text-3xl font-bold mb-6 text-center">📔Edit Book Details</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-center">{t("📔Edit Book Details")}</h2>
                     <form onSubmit={patchBook} className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">Title</label>
+                            <label className="block text-sm font-medium text-gray-700">{t("Title")}</label>
                             <input
                                 type="text"
                                 name="title"
@@ -66,7 +68,7 @@ export default function EditBook() {
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">Author</label>
+                            <label className="block text-sm font-medium text-gray-700">{t("Author")}</label>
                             <input
                                 type="text"
                                 name="author"
@@ -76,7 +78,7 @@ export default function EditBook() {
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">Genre</label>
+                            <label className="block text-sm font-medium text-gray-700">{t("Genre")}</label>
                             <input
                                 name="genre"
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -86,7 +88,7 @@ export default function EditBook() {
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">Published Date</label>
+                            <label className="block text-sm font-medium text-gray-700">{t("Published Date")}</label>
                             <input
                                 type="date"
                                 name="published"
@@ -95,7 +97,7 @@ export default function EditBook() {
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">Cover Image URL</label>
+                            <label className="block text-sm font-medium text-gray-700">{t("Cover Image URL")}</label>
                             <input
                                 type="text"
                                 name="imageUrl"
@@ -113,7 +115,7 @@ export default function EditBook() {
                             ></textarea>
                         </div> */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Rating</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">{t("rating")}</label>
                             <div className="flex items-center space-x-1">
                                 {[1, 2, 3, 4, 5].map((star) => (
                                     <button
@@ -135,7 +137,7 @@ export default function EditBook() {
                             type="submit"
                             className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
                         >
-                            Update Book
+                            {t("Update Book")}
                         </button>
                     </form>
                 </div>
