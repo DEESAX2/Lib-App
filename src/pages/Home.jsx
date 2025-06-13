@@ -60,8 +60,8 @@ export default function Home() {
             {/* Featured Books Section */}
             <section className="px-4 sm:px-6 md:px-8 lg:px-16 py-8">
                 <h1 className="text-center text-sub-heading sm:text-2xl md:text-3xl font-bold py-4 sm:py-6">
-                FIND THESE AND MANY OTHER BOOKS FROM OUR BOOK LIST
-                    {t("welcomeMessage")}
+                
+                    {t("FIND THESE AND MANY OTHER BOOKS FROM OUR BOOK LIST")}
                 </h1>
                 
                 <div className="overflow-x-auto px-4">
@@ -95,7 +95,7 @@ export default function Home() {
             {/* Team Section */}
             <section className="px-4 sm:px-6 md:px-8 lg:px-16 py-8">
                 <h1 className="text-center text-xl sm:text-2xl md:text-3xl font-bold py-4 sm:py-6">
-                    {t("meetTeam")}
+                    {t("Meet The Team")}
                 </h1>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-center">
@@ -119,7 +119,7 @@ export default function Home() {
                             />
                             <p className="text-black font-bold text-center">
                                 {member.name} <br />
-                                <span className="font-normal text-sm sm:text-base">{member.role}</span>
+                                <span className="font-normal text-sm sm:text-base">{t(member.role)}</span>
                             </p>
                         </div>
                     ))}

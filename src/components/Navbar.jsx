@@ -155,7 +155,7 @@ function Navbar() {
               className="text-black-600 font-bold hover:text-[#B32317] transition"
               onClick={() => setMenuOpen(false)}
             >
-              Contact
+               {t("contact")}
             </a>
           </li>
         </ul>

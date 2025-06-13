@@ -30,5 +30,12 @@
   "privacyAndSecurity": "Privacy & Security",
   "libraryPolicies": "Library Policies",
   "welcomeMessage": "Welcome to Books Haven Library!",
-  "searchBook": "Search for a book"
+  "searchBook": "Search for a book",
+  "FIND THESE AND MANY OTHER BOOKS FROM OUR BOOK LIST": "Find these and many other books from our book list",
+  "Meet The Team": "Meet the Team",
+  "Back-end web developer": "Back-end Web Developer",
+  "Front-end web developer": "Front-end Web Developer",
+  "expert front-end": "Expert Front-end",
+  "expert back-end": "Expert Back-end"
+
 }
