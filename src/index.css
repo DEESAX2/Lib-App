@@ -28,7 +28,7 @@ body{
   100% { transform: translateX(-50%); }
 }
 .animate-scroll-projects {
-  animation: scroll-projects 10s linear infinite;
+  animation: scroll-projects 5s linear infinite;
   width: max-content;
 }
 
