@@ -7,13 +7,13 @@ import { apiClient } from "../api/client";
 export default function BookList() {
 
   // useState is a hook that gives a component memory
-  const [books, setBooks] = useState([]);
+  const [book, setBook] = useState([]);
 
   const getBooks = () => {
     apiClient.get('/book')
       .then((response) => {
         console.log(response.data);
-        setBooks(response.data);
+        setBook(response.data);
 
       })
       .catch((error) => {
@@ -40,7 +40,7 @@ export default function BookList() {
 
 
     
-    {books.map(book => {
+    {book.map(book => {
       return <BookCard key={book.id} book={book} />
     })}
   </div>
