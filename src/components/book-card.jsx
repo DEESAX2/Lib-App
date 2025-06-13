@@ -15,14 +15,14 @@ console.log('bookd',book)
 
     return (
         
-        <div className="bg-gray-300">
+        <div className="bg-red-600 p-6 rounded-md">
             <img src={book.imageUrl} alt="arguing" className="w-full" />
-            <h2 className="font-bold">{book.author}</h2>
-            <h3 className="text-red-700 font-bold text-xm">{book.title}</h3>
+            <h2 className="font-bold text-2xl">{book.author}</h2>
+            <h3 className="text-white font-bold text-xm">{book.title}</h3>
             <p className="font-semibold text-gray">{book.genre}</p>
             <p>{formattedDate}</p>
             
-            <Link to={`/view-book?id=${book.id}`} className="p-1 bg-amber-300 rounded-md">View book</Link>
+            <Link to={`/view-book?id=${book.id}`} className="p-1 bg-amber-300 rounded-xl mt-6">View book</Link>
         </div>
 
 

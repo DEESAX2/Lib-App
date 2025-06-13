@@ -37,6 +37,9 @@ export default function BookList() {
 
   {/* Responsive Grid for Book Cards */}
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5 md:m-10">
+
+
+    
     {books.map(book => {
       return <BookCard key={book.id} book={book} />
     })}
