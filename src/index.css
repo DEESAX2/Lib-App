@@ -6,7 +6,8 @@
   /* colors */
   --color-navy-blue: #10107B;
   --color-violet: #7848f4;
-  --color-beige: #B5745A;
+  --color-beige: #B32018;
+  --color-sandy: #404040
 
  /* typography */
   --text-big-heading:36px;
@@ -15,4 +16,17 @@
   --text-body-text:16px;
   --text-paragraph:12px;
   --text-label:10px
+}
+
+body{
+  background-color: beige;
+}
+
+@keyframes scroll-projects {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-projects {
+  animation: scroll-projects 20s linear infinite;
+  width: max-content;
 }
