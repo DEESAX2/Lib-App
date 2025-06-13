@@ -1,15 +1,15 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import artoflogic from "../assets/images/artoflogic.jpg";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useSearchParams } from "react-router";
 import { useEffect, useState } from "react";
 import { apiClient } from "../api/client";
 
 
 
-
 export default function ViewBook() {
+    const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const id = searchParams.get('id');
 
@@ -28,6 +28,20 @@ export default function ViewBook() {
     }
 
     useEffect(getBook, []);
+
+
+    const deleteBook = () => {
+        apiClient.delete(`/book/${id}`)
+            .then((response) => {
+                console.log(response);
+                navigate(-1);
+
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
 
     // --- Start of Date Formatting Logic ---
     const formattedDate = book.date
@@ -74,11 +88,12 @@ export default function ViewBook() {
                 <div className="flex flex-row justify-center gap-3">
                     <Link to={`/edit-book?id=${id}`} className="bg-amber-300 px-5 py-2 rounded-md cursor-pointer">Edit</Link>
 
-                    <button className="bg-red-500 px-5 py-2 rounded-md cursor-pointer">Delete</button>
+                    <button onClick={deleteBook} className="bg-red-500 px-5 py-2 rounded-md cursor-pointer">Delete</button>
                 </div>
 
             </section>
             <Footer />
         </>
     )
+
 }
