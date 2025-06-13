@@ -32,7 +32,7 @@ export default function BookList() {
   <Navbar />
   <div>
     {/* Adjust margin for responsiveness: smaller margin on small screens, larger on medium and up */}
-    <h1 className="text-2xl font-semibold text-center mt-20 mb-10 md:m-40">View all Books</h1>
+    <h1 className="text-2xl font-bold text-center md:m-40">VIEW OUR CATALOG</h1>
   </div>
 
   {/* Responsive Grid for Book Cards */}
