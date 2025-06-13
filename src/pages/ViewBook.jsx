@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { apiClient } from "../api/client";
 
 
+
+
 export default function ViewBook() {
     const [searchParams] = useSearchParams();
     const id = searchParams.get('id');
@@ -27,6 +29,16 @@ export default function ViewBook() {
 
     useEffect(getBook, []);
 
+    // --- Start of Date Formatting Logic ---
+  const formattedDate = book.date
+    ? new Date(book.date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
+    : 'Loading date...'; // Fallback for when date is not yet available
+  // --- End of Date Formatting Logic ---
+
     return (
         <>
             <Navbar />
@@ -41,14 +53,15 @@ export default function ViewBook() {
 
                 <div className="grid grid-cols-2 m-20">
 
-                    <div><img src={artoflogic} alt="artoflogic" className="w-60 flex flex-col justify-center" />
+                    <div><img src={book.imageUrl} alt="artoflogic" className="w-60 flex flex-col justify-center" />
                     </div>
 
                     <div>
-                        <h1 className="text-2xl font-semibold">The Art Of Logic</h1>
-                        <h3 className="mb-10">Eugenia Cheng</h3>
-                        <h4>Synopsis</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit fugit neque sapiente cumque corrupti, illum facere aliquid ipsam omnis reprehenderit totam ducimus, culpa exercitationem enim eveniet similique quibusdam voluptas consectetur dolore porro magnam laboriosam repellendus. Labore quia suscipit veniam.</p>
+                        <h1 className="text-2xl font-semibold">{book.title}</h1>
+                        <h3 className="mb-10">{book.author}</h3>
+                        <h4>{book.genre}</h4>
+                        <h4>{formattedDate}</h4>
+                        {/* <h4>{book.date}</h4> */}
                     </div>
                 </div>
 
@@ -60,9 +73,10 @@ export default function ViewBook() {
 
 
 
-                <div><h3 className="mt-20 font-bold text-2xl text-center">GENRE</h3>
-                    <div className="flex flex-row justify-evenly p-20 bg-amber-600"><p>Fiction</p><p>Non-Fiction</p><p>Religious</p><p>Politics</p><p>Climate</p></div>
-                </div>
+                {/* <div className="">
+                    <h3 className="font-bold text-2xl text-center mt-20">GENRE</h3>
+                    <div className="flex flex-row justify-evenly p-20 text-red-800 text-2xl font-semibold"><p>Fiction</p><p>Non-Fiction</p><p>Religious</p><p>Politics</p><p>Climate</p></div>
+                </div> */}
 
             </section>
             <Footer />
