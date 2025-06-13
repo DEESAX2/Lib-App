@@ -11,10 +11,14 @@ import earl from "../assets/images/earl.jpeg";
 import Hero2 from "../assets/images/Hero2.jpeg";
 import video from "../assets/video/video.mp4";
 import sandra from "../assets/images/sandra.jpeg";
+import alexis from "../assets/images/alexis.jpeg";
+import teach from "../assets/images/teach.jpg";
+import expertR from "../assets/images/expertR.jpg";
 import intelligencetrap from "../assets/images/intelligencetrap.jpg";
 import artoflogic from "../assets/images/artoflogic.jpg";
 import arguing from "../assets/images/arguing.jpg";
 import idiotbrain from "../assets/images/idiotbrain.jpg";
+
 
 export default function Home() {
     const { t } = useTranslation();
@@ -42,8 +46,8 @@ export default function Home() {
                                 type="search" 
                                 name="book" 
                                 id="book" 
-                                placeholder="Search book" 
                                 className="bg-beige p-2 rounded-l-md w-full focus:outline-none" 
+                               placeholder=  {t("search")}
                             />
                             <button className="bg-yellow-400 p-2 rounded-r-md hover:bg-yellow-500 transition-colors">
                                 <a href="http://localhost:5173/booklist"><Search className="text-black" /></a>
@@ -56,7 +60,8 @@ export default function Home() {
             {/* Featured Books Section */}
             <section className="px-4 sm:px-6 md:px-8 lg:px-16 py-8">
                 <h1 className="text-center text-sub-heading sm:text-2xl md:text-3xl font-bold py-4 sm:py-6">
-                    FIND THESE AND MANY MORE FROM OUR DIVERSE BOOK LIST
+                FIND THESE AND MANY OTHER BOOKS FROM OUR BOOK LIST
+                    {t("welcomeMessage")}
                 </h1>
                 
                 <div className="overflow-x-auto px-4">
@@ -70,6 +75,7 @@ export default function Home() {
                             { src: intelligencetrap, alt: "Intelligence Trap book" },
                             { src: artoflogic, alt: "Art of Logic book" },
                             { src: arguing, alt: "Arguing book" }
+                            
                         ].map((book, index) => (
                             <div 
                                 key={index}
@@ -89,7 +95,7 @@ export default function Home() {
             {/* Team Section */}
             <section className="px-4 sm:px-6 md:px-8 lg:px-16 py-8">
                 <h1 className="text-center text-xl sm:text-2xl md:text-3xl font-bold py-4 sm:py-6">
-                    MEET OUR TEAM
+                    {t("meetTeam")}
                 </h1>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-center">
@@ -97,7 +103,10 @@ export default function Home() {
                         { img: des, name: "Desmond Kponyo", role: "Back-end Web Developer" },
                         { img: earl, name: "Earl Osafo-Ohemeng", role: "Front-end Web Developer" },
                         { img: Hero2, name: "Esther Manor", role: "Front-end Web Developer" },
-                        { img: sandra, name: "Sandra Allotey", role: "Front-end Web Developer" }
+                        { img: sandra, name: "Sandra Allotey", role: "Front-end Web Developer" },
+                        { img: alexis, name: "Alexis Ayirebi-Acquah", role: "Front-end Web Developer" },
+                         { img: teach, name: "Michael ", role: "Expert Front-end" },
+                         { img: expertR, name: "Rachael Kuranchie", role: "Expert Back-end" }
                     ].map((member, index) => (
                         <div 
                             key={index}
