@@ -15,7 +15,7 @@ console.log('bookd',book)
 
     return (
         
-        <div className="bg-red-600 p-6 rounded-md">
+        <div className="bg-alexis p-6 rounded-md">
             <img src={book.imageUrl} alt="arguing" className="w-full" />
             <h2 className="font-bold text-2xl">{book.author}</h2>
             <h3 className="text-white font-bold text-xm">{book.title}</h3>

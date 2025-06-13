@@ -2,12 +2,13 @@
 
 
 
-@theme {
+@theme{
   /* colors */
   --color-navy-blue: #10107B;
   --color-violet: #7848f4;
   --color-beige: #B32018;
-  --color-sandy: #404040
+  --color-sandy: #404040;
+  --color-alexis: #B32018;
 
  /* typography */
   --text-big-heading:36px;

@@ -77,13 +77,6 @@ export default function ViewBook() {
                     <button className="bg-red-500 px-5 py-2 rounded-md cursor-pointer">Delete</button>
                 </div>
 
-
-
-                {/* <div className="">
-                    <h3 className="font-bold text-2xl text-center mt-20">GENRE</h3>
-                    <div className="flex flex-row justify-evenly p-20 text-red-800 text-2xl font-semibold"><p>Fiction</p><p>Non-Fiction</p><p>Religious</p><p>Politics</p><p>Climate</p></div>
-                </div> */}
-
             </section>
             <Footer />
         </>
