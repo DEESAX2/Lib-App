@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import { useEffect, useState } from "react";
 import { apiClient } from "../api/client";
 import { Star } from "lucide-react";
@@ -11,6 +11,7 @@ import SubmitButton from "../components/SubmitButton";
 
 
 export default function EditBook() {
+    const navigate = useNavigate();
     const { t } = useTranslation();
     const [searchParams] = useSearchParams();
     const id = searchParams.get('id');
@@ -41,6 +42,7 @@ export default function EditBook() {
                 },
             });
             console.log(response);
+            navigate(-1); // Navigate back to the previous page
         } catch (error) {
             console.log(error);
         }

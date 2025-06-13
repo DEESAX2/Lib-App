@@ -3,27 +3,28 @@ import Footer from "../components/Footer";
 import { apiClient } from "../api/client";
 import { useTranslation } from "react-i18next";
 import SubmitButton from "../components/SubmitButton";
+import { useNavigate } from "react-router";
+
+
 
 export default function AddBook() {
-  const postBook = (event) => {
-    event.preventDefault();
+  const navigate = useNavigate();
 
-    //Collect from input
-    const data = new FormData(event.target);
+  const postBook = async (data) => {
 
     //Post data to api
-    apiClient.post("/book", data, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        console.log(response);
+    try {
+      const response = await apiClient.post("/book", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+      console.log(response);
+      navigate('/booklist'); // Navigate back to the previous page
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -32,7 +33,7 @@ export default function AddBook() {
         <div className="min-h-screen bg-opacity-80 flex items-center justify-center px-4">
           <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
             <h1 className="text-3xl font-bold mb-6 text-center">📚Add New Book</h1>
-            <form onSubmit={postBook} className="space-y-4">
+            <form action={postBook} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700">Title</label>
                 <input
@@ -78,15 +79,6 @@ export default function AddBook() {
                   className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
-              {/* <div>
-                <label className="block text-sm font-medium text-gray-700">Description</label>
-                <textarea
-                  name="description"
-                  className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  rows="4"
-                  placeholder="Brief description..."
-                ></textarea>
-              </div> */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Rating</label>
                 <div className="flex items-center space-x-1">
@@ -115,12 +107,16 @@ export default function AddBook() {
                   ))}
                 </div>
               </div>
-              <button
+              {/* <button
                 type="submit"
                 className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
               >
                 Add Book
-              </button>
+              </button> */}
+              <SubmitButton
+                title="Add Book"
+                className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
+              />
             </form>
           </div>
         </div>
@@ -128,7 +124,7 @@ export default function AddBook() {
       <Footer />
     </>
   );
-}
+};
 
 
 
