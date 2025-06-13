@@ -50,7 +50,7 @@ export default function Home() {
                                placeholder=  {t("search")}
                             />
                             <button className="bg-yellow-400 p-2 rounded-r-md hover:bg-yellow-500 transition-colors">
-                                <a href="http://localhost:5173/booklist"><Search className="text-black" /></a>
+                                <a href="https://libapp2.netlify.app/booklist"><Search className="text-black" /></a>
                             </button>
                         </div>
                     </div>
