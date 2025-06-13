@@ -24,7 +24,7 @@ export default function Home() {
             
             {/* Hero Section */}
             <section className="relative">
-                <div className="relative w-full h-64 sm:h-80 md:h-[500px] lg:h-[600px] overflow-hidden">
+                <div className="relative w-full  h-64 sm:h-80 md:h-[600px] lg:h-[700px] overflow-hidden">
                     <video
                         src={video}
                         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -37,7 +37,7 @@ export default function Home() {
                         <h1 className="text-big-heading sm:text-3xl md:text-4xl lg:text-5xl text-white text-center font-bold drop-shadow-lg">
                             {t("welcomeMessage")}
                         </h1>
-                        <div className="flex justify-center mt-6 sm:mt-8 md:mt-10 w-full max-w-md">
+                        <div className="flex justify-center mt-16 sm:mt-8 md:mt-10 w-full max-w-md">
                             <input 
                                 type="search" 
                                 name="book" 
@@ -46,7 +46,7 @@ export default function Home() {
                                 className="bg-beige p-2 rounded-l-md w-full focus:outline-none" 
                             />
                             <button className="bg-yellow-400 p-2 rounded-r-md hover:bg-yellow-500 transition-colors">
-                                <Search className="text-black" />
+                                <a href="http://localhost:5173/booklist"><Search className="text-black" /></a>
                             </button>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ export default function Home() {
                                 <img 
                                     src={book.src} 
                                     alt={book.alt} 
-                                    className="w-full h-auto object-contain rounded-lg"
+                                    className=" animate-scroll-projects w-full h-auto object-contain rounded-lg"
                                 />
                             </div>
                         ))}
@@ -95,7 +95,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-center">
                     {[
                         { img: des, name: "Desmond Kponyo", role: "Back-end Web Developer" },
-                        { img: earl, name: "Earl Sarpong", role: "Front-end Web Developer" },
+                        { img: earl, name: "Earl Osafo-Ohemeng", role: "Front-end Web Developer" },
                         { img: Hero2, name: "Esther Manor", role: "Front-end Web Developer" },
                         { img: sandra, name: "Sandra Allotey", role: "Front-end Web Developer" }
                     ].map((member, index) => (
