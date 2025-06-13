@@ -33,8 +33,9 @@
   "searchBook": "搜索书籍",
   "FIND THESE AND MANY OTHER BOOKS FROM OUR BOOK LIST": "在我们的书籍列表中找到这些和更多的书籍",
   "Meet The Team": "认识团队",
-  "Back-end web developer": "后端网页开发者",
-  "Front-end web developer": "前端网页开发者",
   "Expert Front-end": "前端专家",
-  "Expert Back-end": "后端专家"
+  "Expert Back-end": "后端专家",
+  "Back-end Web Developer": "后端网页开发者",
+  "Front-end Web Developer": "前端网页开发者"
+
 }

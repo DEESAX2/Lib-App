@@ -33,8 +33,9 @@
   "searchBook": "Rechercher un livre",
   "FIND THESE AND MANY OTHER BOOKS FROM OUR BOOK LIST": "Trouvez ces livres et bien d'autres dans notre liste de livres",
   "Meet The Team": "Rencontrez l'équipe",
-  "Back-end web developer": "Développeur web back-end",
-  "Front-end web developer": "Développeur web front-end",
-  "expert front-end": "Expert front-end",
-  "expert back-end": "Expert back-end"
+  "Expert Front-end": "Expert front-end",
+  "Expert Back-end": "Expert back-end",
+  "Front-end Web Developer": "Développeur web front-end",
+  "Back-end Web Developer": "Développeur web back-end"
+  
 }
