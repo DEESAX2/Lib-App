@@ -15,6 +15,7 @@ export default function EditBook() {
     const { t } = useTranslation();
     const [searchParams] = useSearchParams();
     const id = searchParams.get('id');
+    const [rating, setRating] = useState(0);
 
 
     const [book, setBook] = useState({});
@@ -53,7 +54,7 @@ export default function EditBook() {
             <Navbar />
             <section className="flex flex-col items-center bg-amber-300  justify-center pt-40 md:pt-40 lg:pt-40">
                 <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
-                   
+
                     <h2 className="text-3xl font-bold mb-6 text-center">{t("📔Edit Book Details")}</h2>
                     <form action={patchBook} className="space-y-4">
                         <div>
@@ -113,10 +114,11 @@ export default function EditBook() {
                                         key={star}
                                         className="focus:outline-none"
                                         tabIndex={-1}
+                                        onClick={() => setRating(star)}
                                     >
                                         <Star
                                             size={24}
-                                            fill={0 >= star ? "#facc15" : "none"}
+                                            fill={rating >= star ? "#facc15" : "none"}
                                             stroke="#facc15"
                                         />
                                     </button>
@@ -127,12 +129,6 @@ export default function EditBook() {
                             title={t("Update Book")}
                             className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
                         />
-                        {/* <button
-                            type="submit"
-                            className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
-                        >
-                            {t("Update Book")}
-                        </button> */}
                     </form>
                 </div>
             </section>
