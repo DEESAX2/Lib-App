@@ -79,7 +79,7 @@ export default function Home() {
                         ].map((book, index) => (
                             <div 
                                 key={index}
-                                className="flex-shrink-0 bg-beige bg-opacity-10 rounded-2xl shadow-lg hover:shadow-yellow-400/40 transition-all duration-300 p-4 w-48 sm:w-56 md:w-64"
+                                className=" flex-shrink-0 bg-beige bg-opacity-10 rounded-2xl shadow-lg hover:shadow-yellow-400/40 transition-all duration-300 p-4 w-48 sm:w-56 md:w-64"
                             >
                                 <img 
                                     src={book.src} 
