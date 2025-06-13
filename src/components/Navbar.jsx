@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import logo from "../assets/images/logo.jpg";
 import { Link } from "react-router";
-import { FaQuestionCircle, FaGlobe,  } from "react-icons/fa";
+import { FaQuestionCircle, FaGlobe } from "react-icons/fa";
 import { useState } from "react";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
   const [showDropdown, setShowDropdown] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -23,7 +24,8 @@ function Navbar() {
             href="https://houstonlibrary.org/get-help"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center hover:underline text-xl bold font-light focus:outline-none" >
+            className="flex items-center hover:underline text-xl bold font-light focus:outline-none"
+          >
             <FaQuestionCircle className="mr-1 text-[#B32317] text-xl" />
             {t("getHelp")}
           </a>
@@ -86,7 +88,7 @@ function Navbar() {
         <div className="w-full h-1 bg-[#B32317]"></div>
       </div>
       {/* Main Bar */}
-      <div className="container mx-auto px-2 py-2 flex justify-between items-center">
+      <div className="container mx-auto px-2 py-2 flex justify-between items-center relative">
         <Link to="#" className="flex items-center space-x-2">
           <img
             src={logo}
@@ -94,11 +96,37 @@ function Navbar() {
             className="h-15 w-25 rounded-full"
           />
         </Link>
-        <ul className="flex space-x-6">
+        {/* Hamburger for mobile */}
+        <button
+          className="md:hidden text-3xl focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        {/* Menu */}
+        <ul
+          className={`flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow md:shadow-none z-40 transition-all duration-300 ${
+            menuOpen ? "flex" : "hidden"
+          } md:flex`}
+        >
           <li>
             <Link
               to="/"
               className="text-black-600 font-bold hover:text-[#B32317] transition"
+              onClick={() => setMenuOpen(false)}
             >
               {t("home")}
             </Link>
@@ -107,6 +135,7 @@ function Navbar() {
             <Link
               to="/add-book"
               className="text-black-600 font-bold hover:text-[#B32317] transition"
+              onClick={() => setMenuOpen(false)}
             >
               {t("addBook")}
             </Link>
@@ -115,11 +144,19 @@ function Navbar() {
             <Link
               to="/booklist"
               className="text-black-600 font-bold hover:text-[#B32317] transition"
+              onClick={() => setMenuOpen(false)}
             >
               {t("bookList")}
             </Link>
           </li>
-          <li><a href="#footer" className="text-black-600 font-bold hover:text-[#B32317] transition">Contact </a>
+          <li>
+            <a
+              href="#footer"
+              className="text-black-600 font-bold hover:text-[#B32317] transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </div>
